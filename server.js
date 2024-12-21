@@ -1,4 +1,4 @@
-// server.js
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -53,7 +53,7 @@ const Transaction = mongoose.model('Transaction', transactionSchema);
 // Routes
 
 // Generate unique UPI ID
-const generateUPIId = () => `${crypto.randomBytes(4).toString('hex')}@fastpay`;
+const generateUPIId = () => `${crypto.randomBytes(4).toString('hex')}@payTM`;
 
 // Signup Route
 app.post('/api/signup', async (req, res) => {
